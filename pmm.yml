@@ -1,0 +1,277 @@
+## This file is a template remove the .template to use the file
+
+libraries: # This is called out once within the config.yml file
+    Films: # These are names of libraries in your Plex
+        reapply_overlays: false
+        collection_files:
+            - pmm: franchise
+        overlay_files:
+            - pmm: resolution
+              template_variables:
+                  horizontal_align: left
+                  vertical_align: bottom
+                  horizontal_offset: 15
+                  vertical_offset: 25
+                  back_color: "#0000"
+                  back_align: left
+                  back_width: 300
+                  back_height: 70
+                  use_4k_dvhdr: false
+                  use_1080p_dvhdr: false
+                  use_dvhdr: false
+                  use_1080p: false
+                  use_720p: false
+                  use_576p: false
+                  use_480p: false
+                  use_edition: false
+            - pmm: resolution
+              template_variables:
+                  horizontal_align: center
+                  vertical_align: top
+                  use_resolution: false
+                  horizontal_offset: 0
+                  vertical_offset: 10
+                  back_color: "#0000"
+                  back_height: 100
+            - pmm: audio_codec
+              template_variables:
+                  horizontal_align: right
+                  vertical_align: bottom
+                  horizontal_offset: 15
+                  vertical_offset: 25
+                  back_color: "#0000"
+                  back_align: right
+                  back_width: 300
+                  back_height: 70
+                  use_truehd_atmos: false
+                  use_plus_atmos: false
+                  url_dolby_atmos: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/defaults/overlays/images/audio_codec/compact/atmos.png
+                  use_truehd: false
+                  use_ma: false
+                  use_flac: false
+                  use_pcm: false
+                  use_hra: false
+                  use_plus: false
+                  use_dtses: false
+                  use_dts: false
+                  use_digital: false
+                  use_aac: false
+                  use_mp3: false
+                  use_opus: false
+        operations:
+            - assets_for_all: true
+            - schedule: weekly(sunday)
+              mass_audience_rating_update: mdb_tomatoesaudience
+              mass_critic_rating_update: mdb_metacritic
+              mass_user_rating_update: omdb
+              mass_genre_update: imdb
+
+    Series:
+        reapply_overlays: false
+        collection_files:
+            - pmm: franchise
+            - pmm: trakt
+        overlay_files:
+            - pmm: network
+              template_variables:
+                  horizontal_align: center
+                  horizontal_offset: 0
+                  vertical_align: top
+                  vertical_offset: 5
+                  back_color: "#0000"
+                  back_height: 100
+                  url: https://raw.githubusercontent.com/zarox-things/configs-and-stuff/main/plex-meta-manager/overlays/images/network/shadow/<<key>>.png
+            - pmm: resolution
+              template_variables:
+                  horizontal_align: left
+                  vertical_align: bottom
+                  horizontal_offset: 15
+                  vertical_offset: 25
+                  back_color: "#0000"
+                  back_align: left
+                  back_width: 300
+                  back_height: 70
+                  use_4k_dvhdr: false
+                  use_1080p_dvhdr: false
+                  use_dvhdr: false
+                  use_1080p: false
+                  use_720p: false
+                  use_576p: false
+                  use_480p: false
+                  use_edition: false
+            - pmm: resolution
+              template_variables:
+                  builder_level: season
+                  horizontal_align: left
+                  vertical_align: bottom
+                  horizontal_offset: 15
+                  vertical_offset: 25
+                  back_color: "#0000"
+                  back_align: left
+                  back_width: 300
+                  back_height: 70
+                  use_4k_dvhdr: false
+                  use_1080p_dvhdr: false
+                  use_dvhdr: false
+                  use_1080p: false
+                  use_720p: false
+                  use_576p: false
+                  use_480p: false
+                  use_edition:
+                      false
+                      # - pmm: resolution
+                      #   template_variables:
+                      #       builder_level: episode
+                      #       horizontal_align: left
+                      #       vertical_align: center
+                      #       horizontal_offset: 15
+                      #       vertical_offset: -40
+                      #       back_color: "#0000"
+                      #       back_align: left
+                      #       back_width: 300
+                      #       back_height: 80
+                      #       use_4k_dvhdr: false
+                      #       use_1080p_dvhdr: false
+                      #       use_dvhdr: false
+                      #       use_1080p: false
+                      #       use_720p: false
+                      #       use_576p: false
+                      #       use_480p: false
+                      #       use_edition: false
+            - pmm: audio_codec
+              template_variables:
+                  horizontal_align: right
+                  vertical_align: bottom
+                  horizontal_offset: 15
+                  vertical_offset: 25
+                  back_color: "#0000"
+                  back_align: right
+                  back_width: 300
+                  back_height: 70
+                  use_truehd_atmos: false
+                  use_plus_atmos: false
+                  url_dolby_atmos: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/defaults/overlays/images/audio_codec/compact/atmos.png
+                  use_truehd: false
+                  use_ma: false
+                  use_flac: false
+                  use_pcm: false
+                  use_hra: false
+                  use_plus: false
+                  use_dtses: false
+                  use_dts: false
+                  use_digital: false
+                  use_aac: false
+                  use_mp3: false
+                  use_opus: false
+            - pmm: audio_codec
+              template_variables:
+                  builder_level: season
+                  horizontal_align: right
+                  vertical_align: bottom
+                  horizontal_offset: 15
+                  vertical_offset: 25
+                  back_color: "#0000"
+                  back_align: right
+                  back_width: 300
+                  back_height: 70
+                  use_truehd_atmos: false
+                  use_plus_atmos: false
+                  url_dolby_atmos: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/defaults/overlays/images/audio_codec/compact/atmos.png
+                  use_truehd: false
+                  use_ma: false
+                  use_flac: false
+                  use_pcm: false
+                  use_hra: false
+                  use_plus: false
+                  use_dtses: false
+                  use_dts: false
+                  use_digital: false
+                  use_aac: false
+                  use_mp3: false
+                  use_opus:
+                      false
+                      # - pmm: audio_codec
+                      #   template_variables:
+                      #       builder_level: episode
+                      #       horizontal_align: left
+                      #       vertical_align: center
+                      #       horizontal_offset: 15
+                      #       vertical_offset: 40
+                      #       back_color: "#0000"
+                      #       back_align: left
+                      #       back_width: 300
+                      #       back_height: 70
+                      #       use_truehd_atmos: false
+                      #       use_plus_atmos: false
+                      #       url_dolby_atmos: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/defaults/overlays/images/audio_codec/compact/atmos.png
+                      #       use_truehd: false
+                      #       use_ma: false
+                      #       use_flac: false
+                      #       use_pcm: false
+                      #       use_hra: false
+                      #       use_plus: false
+                      #       use_dtses: false
+                      #       use_dts: false
+                      #       use_digital: false
+                      #       use_aac: false
+                      #       use_mp3: false
+                      #       use_opus: false
+        operations:
+            assets_for_all: true
+
+playlist_files:
+    - pmm: playlist # This is a file within PMM's defaults folder
+      template_variables:
+          libraries:
+              Films, Series # list of libraries that you want the PMM Defaults playlists to look at
+              # see the wiki for how to use local files, folders, URLs, or files from git
+settings:
+    run_order:
+        - operations
+        - metadata
+        - collections
+        - overlays
+    cache: true
+    cache_expiration: 60
+    asset_directory: /cache/assets
+    asset_folders: true
+    asset_depth: 0
+    create_asset_folders: false
+    prioritize_assets: false
+    dimensional_asset_rename: false
+    download_url_assets: false
+    show_missing_season_assets: false
+    show_missing_episode_assets: false
+    show_asset_not_needed: true
+    sync_mode: append
+    minimum_items: 2
+    default_collection_order:
+    delete_below_minimum: true
+    delete_not_scheduled: true
+    run_again_delay: 2
+    missing_only_released: false
+    only_filter_missing: false
+    show_unmanaged: true
+    show_unconfigured: true
+    show_filtered: false
+    show_options: true
+    show_missing: true
+    show_missing_assets: true
+    save_report: false
+    tvdb_language: eng
+    ignore_ids:
+    ignore_imdb_ids:
+    item_refresh_delay: 0
+    playlist_sync_to_user: all
+    playlist_exclude_users:
+    playlist_report: false
+    verify_ssl: true
+    custom_repo:
+    check_nightly: false
+webhooks: # Can be individually specified per library as well
+    error:
+    version:
+    run_start:
+    run_end:
+    changes:
+    delete:
